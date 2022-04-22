@@ -27,7 +27,7 @@
             if (randomNumber == 1 ) {
                 move = 'rock';
             } else if (randomNumber == 2) {
-                move = 'raper';
+                move = 'paper';
             } else {
                 move = 'scissors';
             }
@@ -40,7 +40,7 @@
             let winner;
 
             if (computerSelection == playerSelection) {
-                winner = 'draw';
+                winner = 'draw'
                 return winner;
             } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
                 winner = 'you'
@@ -91,6 +91,18 @@
             }
 
             console.log(playerScore, computerScore, draw);
+
+
+            let gameWinner;
+            if (playerScore > computerScore) {
+                gameWinner = 'You won!';
+            } else if (playerScore < computerScore) {
+                gameWinner = 'You lost!';
+            } else if (playerScore == computerScore) {
+                gameWinner = 'It\'s a draw';
+            }
+
+            console.log(gameWinner);
         }
     </script>
 </body>
